@@ -138,8 +138,10 @@
     <Content Include="app\components\users\userAddView.html" />
     <Content Include="app\components\users\usersListController.js" />
     <Content Include="app\components\users\usersListView.html" />
+    <Content Include="app\shared\filters\statusFilter.js" />
     <Content Include="app\shared\modules\admintool.common.js" />
     <Content Include="app\shared\services\apiService.js" />
+    <Content Include="app\shared\services\notificationService.js" />
     <Content Include="assets\css\AdminLTE.css" />
     <Content Include="assets\css\AdminLTE.min.css" />
     <Content Include="assets\css\alt\AdminLTE-bootstrap-social.css" />
