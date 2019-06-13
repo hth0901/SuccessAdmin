@@ -5,9 +5,6 @@
     apiService.$inject = ['$http'];
 
     function apiService($http) {
-        return {
-            get: getFunc
-        };
 
         function getFunc(url, params, successed, failed) {
             $http.get(url, params).then(function (result) {
@@ -15,6 +12,19 @@
             }, function (error) {
                 failed(error);
             })
+        };
+
+        function postFunc(url, data, success, fail) {
+            $http.post(url, data).then(function (result) {
+                success(result)
+            }, function (error) {
+                fail(error);
+            });
+        };
+
+        return {
+            get: getFunc,
+            post: postFunc
         };
     }
 })(angular.module('admintool.common'));

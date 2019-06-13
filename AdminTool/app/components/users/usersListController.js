@@ -6,6 +6,13 @@
 
     function usersListController($scope, apiService, notificationService) {
         $scope.lstUser = [];
+
+        $scope.keyword = '';
+
+        $scope.addUser = function () {
+
+        }
+
         $scope.getAllUser = function () {
             apiService.get('http://localhost/KdcTest/api/kdc/getalluser', null, function (result) {
                 $scope.lstUser = result.data;
