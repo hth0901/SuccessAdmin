@@ -131,8 +131,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
+    <Content Include="app\components\exam\exam.module.js" />
+    <Content Include="app\components\exam\examAddController.js" />
+    <Content Include="app\components\exam\examAddView.html" />
+    <Content Include="app\components\exam\examListController.js" />
+    <Content Include="app\components\exam\examListView.html" />
     <Content Include="app\components\home\homeController.js" />
     <Content Include="app\components\home\homeView.html" />
+    <Content Include="app\components\question\question.module.js" />
     <Content Include="app\components\users\user.module.js" />
     <Content Include="app\components\users\userAddController.js" />
     <Content Include="app\components\users\userAddView.html" />
