@@ -232,6 +232,19 @@
                             <li><a ui-sref="user_add"><i class="fa fa-circle-o"></i>Add User</a></li>
                         </ul>
                     </li>
+
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-edit"></i> <span>Examination</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a ui-sref="exam_list"><i class="fa fa-circle-o"></i>List Exam</a></li>
+                            <li><a ui-sref="exam_add"><i class="fa fa-circle-o"></i>Add Exam</a></li>
+                        </ul>
+                    </li>
                     @*<li class="treeview">
                         <a href="#">
                             <i class="fa fa-table"></i> <span>Tables</span>
@@ -515,9 +528,15 @@
     <script src="~/app/shared/services/apiService.js"></script>
     <script src="~/app/shared/services/notificationService.js"></script>
     <script src="~/app/components/users/user.module.js"></script>
+    <script src="~/app/components/exam/exam.module.js"></script>
+    <script src="~/app/components/question/question.module.js"></script>
     <script src="~/app/app.js"></script>
     <script src="~/app/components/users/usersListController.js"></script>
     <script src="~/app/components/users/userAddController.js"></script>
+    <script src="~/app/components/exam/examAddController.js"></script>
+    <script src="~/app/components/exam/examListController.js"></script>
+    <script src="~/app/components/question/questionAddController.js"></script>
+    <script src="~/app/components/question/questionListController.js"></script>
     <script src="~/app/components/home/homeController.js"></script>
     <script>
   $(document).ready(function () {

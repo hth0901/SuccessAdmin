@@ -2,10 +2,20 @@
 (function (app) {
     app.controller('examAddController', examAddController);
 
-    examAddController.$inject = ['$scope'];
+    examAddController.$inject = ['$scope', 'apiService'];
 
-    function examAddController($scope) {
-        
+    function examAddController($scope, apiService) {
+        $scope.exam = {};
+
+        $scope.addNewExam = function () {
+            console.log($scope.exam);
+
+            apiService.post('http://localhost/KdcTest/api/exam/createnewexam', $scope.exam, function (result) {
+                console.log(result);
+            }, function (error) {
+                console.log(error);
+            });
+        }
     }
 
 })(angular.module('admintool.exam'));
