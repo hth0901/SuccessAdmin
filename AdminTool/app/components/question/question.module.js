@@ -12,7 +12,7 @@
         })
         .state('question_add', {
             url: '/question_add',
-            templateUrl: './app/components/question/questionAddView.html',
+            templateUrl: '/app/components/question/questionAddView.html',
             controller: 'questionAddController'
         })
     }

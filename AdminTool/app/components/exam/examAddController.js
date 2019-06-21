@@ -10,11 +10,15 @@
         $scope.addNewExam = function () {
             console.log($scope.exam);
 
+            let insertResult = false;
+
             apiService.post('http://localhost/KdcTest/api/exam/createnewexam', $scope.exam, function (result) {
+                insertResult = true;
                 console.log(result);
             }, function (error) {
                 console.log(error);
             });
+            console.log(insertResult);
         }
     }
 

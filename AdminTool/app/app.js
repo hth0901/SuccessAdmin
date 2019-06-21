@@ -1,6 +1,6 @@
 ﻿/// <reference path="D:\Workspace\SuccessAdmin\AdminTool\assets/libs/angular/angular.js" />
 (function () {
-    angular.module('admintool', ['admintool.user','admintool.exam', 'admintool.common']).config(config);
+    angular.module('admintool', ['admintool.user', 'admintool.exam', 'admintool.question', 'admintool.common']).config(config);
 
     config.$inject = ['$stateProvider', '$urlRouterProvider'];
 
