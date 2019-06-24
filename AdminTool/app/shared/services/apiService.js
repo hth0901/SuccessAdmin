@@ -22,9 +22,18 @@
             });
         };
 
+        function putFunc(url, data, success, fail) {
+            $http.put(url, data).then(function (result) {
+                success(result)
+            }, function (error) {
+                fail(error);
+            });
+        };
+
         return {
             get: getFunc,
-            post: postFunc
+            post: postFunc,
+            put: putFunc
         };
     }
 })(angular.module('admintool.common'));

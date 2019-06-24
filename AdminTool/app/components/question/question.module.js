@@ -15,5 +15,10 @@
             templateUrl: '/app/components/question/questionAddView.html',
             controller: 'questionAddController'
         })
+        .state('question_edit_state', {
+            url: '/question_edit_url/:code',
+            templateUrl: '/app/components/question/questionEditView.html',
+            controller: 'questionEditController'
+        });
     }
 })();

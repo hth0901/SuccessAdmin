@@ -1,1 +1,49 @@
-﻿
+﻿<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">List of Question</h3>
+                    <div class="box-tools" style="top: 10px; right: 175px">
+                        <label>Choose examination</label>
+                    </div>
+                    <div class="box-tools">
+                        <div class="input-group input-group-sm" style="width: 150px;">
+                            <select class="form-control" name="exam_code" ng-model="examCode" ng-options="option.EXAM_CODE as option.EXAM_CODE_VALUE for option in lstExam">
+                                <!--<option value="" selected>Examination</option>-->
+                            </select>
+                            <input type="hidden" name="parentId" ng-model="examCode" />
+                            <div class="input-group-btn">
+                                <button type="submit" class="btn btn-default" ng-click="getProducts()"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body table-responsive no-padding">
+                    <div class="box-header">
+                        <div class="col-md-6">
+                            <button class="btn btn-success" ui-sref="question_add">Add New Question</button>
+                        </div>
+                    </div>
+                    <table class="table table-hover">
+                        <tr>
+                            <th>CODE</th>
+                            <th>Content</th>
+                        </tr>
+                        <tr ng-repeat="question in lstQuestions">
+                            <td>{{question.QUESTION_CODE}}</td>
+                            <td>{{question.QUESTION_CONTENT}}</td>
+
+                            <td>
+                                <button class="btn btn-sm btn-primary" ui-sref="question_edit_state({code:question.QUESTION_CODE})">Edit</button> 
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</section>

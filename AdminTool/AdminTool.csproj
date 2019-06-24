@@ -141,6 +141,8 @@
     <Content Include="app\components\question\question.module.js" />
     <Content Include="app\components\question\questionAddController.js" />
     <Content Include="app\components\question\questionAddView.html" />
+    <Content Include="app\components\question\questionEditController.js" />
+    <Content Include="app\components\question\questionEditView.html" />
     <Content Include="app\components\question\questionListController.js" />
     <Content Include="app\components\question\questionListView.html" />
     <Content Include="app\components\users\user.module.js" />

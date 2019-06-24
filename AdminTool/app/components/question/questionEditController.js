@@ -1,10 +1,10 @@
 ﻿/// <reference path="D:\Workspace\SuccessAdmin\AdminTool\assets/libs/angular/angular.js" />
 (function (app) {
-    app.controller('questionAddController', questionAddController);
+    app.controller('questionEditController', questionEditController);
 
-    questionAddController.$inject = ['$scope', 'apiService'];
+    questionEditController.$inject = ['$scope', 'apiService', 'notificationService', '$state', '$stateParams'];
 
-    function questionAddController($scope, apiService) {
+    function questionEditController($scope, apiService, notificationService, $state, $stateParams) {
         $scope.lstExam = [];
 
         $scope.examCode = '';
@@ -18,7 +18,10 @@
             });
         }
 
-        getListExam();
+        function loadQuestionDetail() {
+            let qCode = $stateParams.code;
+            console.log($stateParams.code);
+        }
 
         $scope.eQuestion = {};
         $scope.eQuestion.PART = "5";
@@ -28,12 +31,16 @@
             console.log($scope.eQuestion);
             
 
-            apiService.post('http://localhost/KdcTest/api/question/createnewquestion', $scope.eQuestion, function (result) {
+            apiService.post('http://localhost/KdcTest/api/question/updatequestion', $scope.eQuestion, function (result) {
                 console.log(result);
+                //notificationService.displaySuccess('updated success');
+                //$state.go('question_list')
             }, function (error) {
                 console.log(error);
             });
         }
+
+        loadQuestionDetail();
     }
 
 })(angular.module('admintool.question'));
