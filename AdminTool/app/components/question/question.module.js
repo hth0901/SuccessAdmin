@@ -11,7 +11,7 @@
             controller: 'questionListController'
         })
         .state('question_add', {
-            url: '/question_add',
+            url: '/question_add/:code',
             templateUrl: '/app/components/question/questionAddView.html',
             controller: 'questionAddController'
         })

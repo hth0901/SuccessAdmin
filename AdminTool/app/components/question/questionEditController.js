@@ -9,6 +9,11 @@
 
         $scope.examCode = '';
 
+        $scope.eQuestion = {};
+        $scope.eQuestion.PART = "5";
+
+        $scope.correctAnswer = ""
+
         function getListExam() {
             apiService.get('http://localhost/KdcTest/api/exam/getallexam', null, function (result) {
                 $scope.lstExam = result.data;
@@ -20,11 +25,14 @@
 
         function loadQuestionDetail() {
             let qCode = $stateParams.code;
-            console.log($stateParams.code);
+            apiService.get('http://localhost/KdcTest/api/question/getquestiondetail?questionCode=' + qCode, null, function (result) {
+                //$scope.lstExam = result.data;
+                $scope.eQuestion = result.data;
+                console.log(result.data);
+            }, function (err) {
+                console.log(err);
+            });
         }
-
-        $scope.eQuestion = {};
-        $scope.eQuestion.PART = "5";
 
         $scope.addNewQuestion = function () {
             $scope.eQuestion.EXAM_CODE = $scope.examCode;
