@@ -12,7 +12,12 @@
         $scope.eQuestion = {};
         $scope.eQuestion.PART = "5";
 
-        $scope.correctAnswer = ""
+        $scope.ckeditorOptions = {
+            language: 'vi',
+            height: '200px'
+        };
+
+        $scope.correctAnswer = "";
 
         function getListExam() {
             apiService.get('http://localhost/KdcTest/api/exam/getallexam', null, function (result) {
@@ -42,6 +47,17 @@
             apiService.post('http://localhost/KdcTest/api/question/updatequestion', $scope.eQuestion, function (result) {
                 console.log(result);
                 //notificationService.displaySuccess('updated success');
+                //$state.go('question_list')
+            }, function (error) {
+                console.log(error);
+            });
+        }
+
+        $scope.updateQuestion = function () {
+            //console.log($scope.eQuestion);
+            apiService.put('http://localhost/KdcTest/api/question/updatequestion', $scope.eQuestion, function (result) {
+                console.log(result);
+                notificationService.displaySuccess('updated success');
                 //$state.go('question_list')
             }, function (error) {
                 console.log(error);

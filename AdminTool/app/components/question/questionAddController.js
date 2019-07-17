@@ -9,6 +9,11 @@
 
         $scope.examCode = '';
 
+        $scope.ckeditorOptions = {
+            language: 'vi',
+            height: '200px'
+        };
+
         function getListExam() {
             //apiService.get('http://localhost/KdcTest/api/exam/getallexam', null, function (result) {
             //    $scope.lstExam = result.data;

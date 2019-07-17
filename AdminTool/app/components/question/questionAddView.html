@@ -40,7 +40,8 @@
             <div class="form-group">
                 <label for="exem_desc" class="col-sm-2 control-label">Content</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="exem_desc" placeholder="Insert Question Content" ng-model="eQuestion.QUESTION_CONTENT">
+                    <!--<input type="text" class="form-control" id="exem_desc" placeholder="Insert Question Content" ng-model="eQuestion.QUESTION_CONTENT">-->
+                    <textarea class="form-control" name="question_content" ckeditor="ckeditorOptions" ng-model="eQuestion.QUESTION_CONTENT"></textarea>
                 </div>
             </div>
 

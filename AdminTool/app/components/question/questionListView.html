@@ -33,8 +33,7 @@
                         </tr>
                         <tr ng-repeat="question in lstQuestions">
                             <td>{{question.QUESTION_CODE}}</td>
-                            <td>{{question.QUESTION_CONTENT}}</td>
-
+                            <td ng-bind-html="question.QUESTION_CONTENT"></td>
                             <td>
                                 <button class="btn btn-sm btn-primary" ui-sref="question_edit_state({code:question.QUESTION_CODE})">Edit</button> 
                             </td>

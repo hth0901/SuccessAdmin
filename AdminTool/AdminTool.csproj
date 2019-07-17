@@ -221,6 +221,9 @@
     <Content Include="assets\js\demo.js" />
     <Content Include="assets\js\pages\dashboard.js" />
     <Content Include="assets\js\pages\dashboard2.js" />
+    <Content Include="assets\libs\angular-sanitize\angular-sanitize.js" />
+    <Content Include="assets\libs\angular-sanitize\angular-sanitize.min.js" />
+    <Content Include="assets\libs\angular-sanitize\index.js" />
     <Content Include="assets\libs\angular-ui-router\.bower.json" />
     <Content Include="assets\libs\angular-ui-router\artifacts.json" />
     <Content Include="assets\libs\angular-ui-router\bower.json" />
@@ -5613,6 +5616,12 @@
     <Content Include="assets\libs\toastr\toastr.js.map" />
     <Content Include="assets\libs\toastr\toastr.less" />
     <Content Include="assets\libs\toastr\toastr.scss" />
+    <Content Include="assets\libs\angular-sanitize\.bower.json" />
+    <Content Include="assets\libs\angular-sanitize\angular-sanitize.min.js.map" />
+    <Content Include="assets\libs\angular-sanitize\bower.json" />
+    <Content Include="assets\libs\angular-sanitize\LICENSE.md" />
+    <Content Include="assets\libs\angular-sanitize\package.json" />
+    <Content Include="assets\libs\angular-sanitize\README.md" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
