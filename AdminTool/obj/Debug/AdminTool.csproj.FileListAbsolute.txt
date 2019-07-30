@@ -38,3 +38,5 @@ D:\Workspace\SuccessAdmin\AdminTool\bin\Newtonsoft.Json.xml
 D:\Workspace\SuccessAdmin\AdminTool\obj\Debug\AdminTool.csprojResolveAssemblyReference.cache
 D:\Workspace\SuccessAdmin\AdminTool\obj\Debug\AdminTool.dll
 D:\Workspace\SuccessAdmin\AdminTool\obj\Debug\AdminTool.pdb
+D:\Workspace\SuccessAdmin\AdminTool\bin\System.Net.Http.Formatting.dll
+D:\Workspace\SuccessAdmin\AdminTool\bin\System.Net.Http.Formatting.xml

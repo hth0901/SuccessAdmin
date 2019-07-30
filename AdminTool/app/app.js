@@ -16,13 +16,12 @@
                 parent: 'base',
                 templateUrl: '/app/components/home/homeView.html',
                 controller: 'homeController'
-            })
-            .state('login', {
-                url: '/login',
-                templateUrl: '/app/components/login/loginView.html',
-                controller: 'loginController'
-            }
-        );
+            });
+            //.state('login', {
+            //    url: '/login',
+            //    templateUrl: '/app/components/login/loginView.html',
+            //    controller: 'loginController'
+            //});
 
         $urlRouterProvider.otherwise('/admin');
     }

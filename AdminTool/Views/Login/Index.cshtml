@@ -23,21 +23,21 @@
     @*<link rel="stylesheet" href="../../plugins/iCheck/square/blue.css">*@
     <link href="~/assets/libs/iCheck/skins/square/blue.css" rel="stylesheet" />
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" ng-app="admintool.login" ng-controller="loginController">
     <div class="login-box">
         <div class="login-logo">
-            <a href="../../index2.html"><b>Admin</b>LTE</a>
+            <a href="#"><b>Admin Tool</b></a>
         </div>
         <!-- /.login-logo -->
         <div class="login-box-body">
-            <p class="login-box-msg">Sign in to start your session</p>
-            <form action="../../index2.html" method="post">
+            <p class="login-box-msg">Sign in</p>
+            <form role="form" ng-submit="loginSubmit()">
                 <div class="form-group has-feedback">
-                    <input type="email" class="form-control" placeholder="Email">
+                    <input type="text" class="form-control" placeholder="Username" ng-model="userLogin.UserName">
                     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                 </div>
                 <div class="form-group has-feedback">
-                    <input type="password" class="form-control" placeholder="Password">
+                    <input type="password" class="form-control" placeholder="Password" ng-model="userLogin.Password">
                     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                 </div>
                 <div class="row">
@@ -50,25 +50,12 @@
                     </div>
                     <!-- /.col -->
                     <div class="col-xs-4">
+                        @*<button type="button" class="btn btn-primary btn-block btn-flat" ng-click="loginSubmit()">Sign In</button>*@
                         <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
                     </div>
                     <!-- /.col -->
                 </div>
             </form>
-            <div class="social-auth-links text-center">
-                <p>- OR -</p>
-                <a href="#" class="btn btn-block btn-social btn-facebook btn-flat">
-                    <i class="fa fa-facebook"></i> Sign in using
-                    Facebook
-                </a>
-                <a href="#" class="btn btn-block btn-social btn-google btn-flat">
-                    <i class="fa fa-google-plus"></i> Sign in using
-                    Google+
-                </a>
-            </div>
-            <!-- /.social-auth-links -->
-            <a href="#">I forgot my password</a><br>
-            <a href="register.html" class="text-center">Register a new membership</a>
         </div>
         <!-- /.login-box-body -->
     </div>
@@ -80,14 +67,29 @@
     <!-- iCheck -->
     @*<script src="../../plugins/iCheck/icheck.min.js"></script>*@
     <script src="~/assets/libs/iCheck/icheck.js"></script>
+
+    <script src="~/assets/libs/angular/angular.js"></script>
+    <script src="~/assets/libs/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="~/assets/libs/angular-sanitize/angular-sanitize.js"></script>
+    <script src="~/assets/libs/toastr/toastr.js"></script>
+    <script src="~/assets/libs/ckeditor/ckeditor.js"></script>
+    <script src="~/assets/libs/ng-ckeditor/ng-ckeditor.js"></script>
+
+    <script src="~/app/shared/modules/admintool.common.js"></script>
+    <script src="~/app/shared/filters/statusFilter.js"></script>
+    <script src="~/app/shared/services/apiService.js"></script>
+    <script src="~/app/shared/services/notificationService.js"></script>
+    <script src="~/app/components/login/admintool.login.js"></script>
+
+    <script src="~/app/components/login/loginController.js"></script>
     <script>
-  $(function () {
-    $('input').iCheck({
-      checkboxClass: 'icheckbox_square-blue',
-      radioClass: 'iradio_square-blue',
-      increaseArea: '20%' /* optional */
+    $(function () {
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%' /* optional */
+        });
     });
-  });
     </script>
 </body>
 </html>
