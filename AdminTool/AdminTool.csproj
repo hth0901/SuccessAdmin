@@ -129,6 +129,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -151,10 +152,20 @@
     <Content Include="app\components\question\question.module.js" />
     <Content Include="app\components\question\questionAddController.js" />
     <Content Include="app\components\question\questionAddView.html" />
+    <Content Include="app\components\question\questionAddView_bk.html" />
     <Content Include="app\components\question\questionEditController.js" />
     <Content Include="app\components\question\questionEditView.html" />
     <Content Include="app\components\question\questionListController.js" />
     <Content Include="app\components\question\questionListView.html" />
+    <Content Include="app\components\semester\semester.module.js" />
+    <Content Include="app\components\semester\semesterAddController.js" />
+    <Content Include="app\components\semester\semesterEditController.js" />
+    <Content Include="app\components\semester\semesterListController.js" />
+    <Content Include="app\components\semester\semesterAddView.html" />
+    <Content Include="app\components\semester\semesterEditView.html" />
+    <Content Include="app\components\semester\semesterListView.html" />
+    <Content Include="app\components\test\test.module.js" />
+    <Content Include="app\components\test\testController.js" />
     <Content Include="app\components\users\user.module.js" />
     <Content Include="app\components\users\userAddController.js" />
     <Content Include="app\components\users\userAddView.html" />
@@ -5635,6 +5646,7 @@
     <Content Include="assets\libs\toastr\toastr.js" />
     <Content Include="assets\libs\toastr\toastr.min.css" />
     <Content Include="assets\libs\toastr\toastr.min.js" />
+    <Content Include="assets\libs\ui-bootstrap-tpls-2.5.0.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -5779,6 +5791,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Test\Index.cshtml" />
+    <Content Include="Views\Admin\Index_bk_20190818.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\shared\footer\" />

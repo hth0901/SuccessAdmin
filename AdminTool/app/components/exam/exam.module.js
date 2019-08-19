@@ -13,13 +13,13 @@
         //})
         .state('exam_list', {
             url: '/exam_list',
-            parent: 'base',
+            //parent: 'base',
             templateUrl: '/app/components/exam/examListView.html',
             controller: 'examListController'
         })
         .state('exam_add', {
             url: '/exam_add',
-            parent: 'base',
+            //parent: 'base',
             templateUrl: '/app/components/exam/examAddView.html',
             controller: 'examAddController'
         });

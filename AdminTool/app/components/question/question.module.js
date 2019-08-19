@@ -13,19 +13,19 @@
         //})
         .state('question_list', {
             url: '/question_list',
-            parent: 'base',
+            //parent: 'base',
             templateUrl: '/app/components/question/questionListView.html',
             controller: 'questionListController'
         })
         .state('question_add', {
             url: '/question_add/:code',
-            parent: 'base',
+            //parent: 'base',
             templateUrl: '/app/components/question/questionAddView.html',
             controller: 'questionAddController'
         })
         .state('question_edit_state', {
             url: '/question_edit_url/:code',
-            parent: 'base',
+            //parent: 'base',
             templateUrl: '/app/components/question/questionEditView.html',
             controller: 'questionEditController'
         });
