@@ -95,45 +95,67 @@
             <div class="box">
                 <div class="box-header">
                     <h3 class="box-title">List of Question</h3>
-                    <div class="box-tools" style="top: 10px; right: 175px">
-                        <label>Choose examination</label>
-                    </div>
-                    <div class="box-tools">
-                        <div class="input-group input-group-sm" style="width: 150px;">
-                            <select class="form-control" name="exam_code" ng-model="examCode" ng-options="option.EXAM_CODE as option.EXAM_CODE_VALUE for option in lstExam">
-                                <!--<option value="" selected>Examination</option>-->
-                            </select>
-                            <input type="hidden" name="parentId" ng-model="examCode" />
-                            <div class="input-group-btn">
-                                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                            </div>
-                        </div>
-                    </div>
                 </div>
+                <br />
                 <!-- /.box-header -->
                 <div class="box-body table-responsive no-padding">
-                    <div class="box-header">
-                        <div class="col-md-6">
-                            <button class="btn btn-success" ui-sref="question_add({code:examCode})">Add New Question</button>
+                    <form class="form-horizontal" style="width: 80%" novalidate name="frmAddQuestion" role="form" ng-submit="addNewSemester()">
+
+                        <div class="form-group">
+                            <label for="exam_code" class="col-sm-2 control-label">Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="exam_code" placeholder="Classify" ng-model="eQuestion.CLASSIFY">
+                            </div>
                         </div>
-                    </div>
-                    <table class="table table-hover">
-                        <tr>
-                            <th>CODE</th>
-                            <th>Content</th>
-                        </tr>
-                        <tr ng-repeat="question in lstQuestions">
-                            <td>{{question.QUESTION_CODE}}</td>
-                            <td ng-bind-html="question.QUESTION_CONTENT"></td>
-                            <td>
-                                <button class="btn btn-sm btn-primary" ui-sref="question_edit_state({code:question.QUESTION_CODE})">Edit</button>
-                            </td>
-                        </tr>
-                    </table>
+                        <div class="form-group">
+                            <label for="datepicker" class="col-sm-2 control-label">Opening Date</label>
+                            <div class="col-sm-10">
+                                <div class="input-group date">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    <input type="text" class="form-control pull-right pick_date">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="datepicker" class="col-sm-2 control-label">Register Time</label>
+                            <div class="col-sm-10">
+                                <div class="input-group date">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    <input type="text" class="form-control pull-right" id="reservation">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exem_desc" class="col-sm-2 control-label">Description</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="exem_desc" placeholder="Insert Question Content" ng-model="eQuestion.IDX_IN_EXAM">
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <!-- /.box-body -->
+                <div class="box-footer">
+                    <button class="btn btn-default" ui-sref="users">Cancel</button>
+                    <button type="submit" class="btn btn-success pull-right">Add</button>
+                </div>
             </div>
             <!-- /.box -->
         </div>
     </div>
 </section>
+
+<script>
+    $(function () {
+        $('.pick_date').datepicker({
+            autoclose: true
+        });
+
+        $('#reservation').daterangepicker({
+            autoclose: true
+        });
+    })
+</script>
