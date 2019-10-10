@@ -1,1 +1,108 @@
-﻿<h1>Semester Edit</h1>
+﻿<style>
+    .form_element {
+        width: 700px;
+        margin-left: 10px;
+    }
+</style>
+
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">List of Question</h3>
+                </div>
+                <br />
+                <!-- /.box-header -->
+                <!--<div class="box-body table-responsive no-padding">-->
+                <form class="form-horizontal" novalidate name="frmAddQuestion" role="form" ng-submit="addNewSemester()">
+
+                    <div class="box-body table-responsive no-padding">
+                        <div class="form-group form_element">
+                            <label for="exam_code" class="col-sm-2 control-label">Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="exam_code" placeholder="Name" ng-model="eSemeter.SMT_NAME">
+                            </div>
+                        </div>
+                        <div class="form-group form_element">
+                            <label for="datepicker" class="col-sm-2 control-label">Opening Date</label>
+                            <div class="col-sm-10">
+                                <div class="input-group date">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    <input type="text" class="form-control pull-right pick_date" data-date-format="dd/mm/yyyy" ng-model="eSemeter.OPENING_DATE">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group form_element">
+                            <label for="datepicker" class="col-sm-2 control-label">Register From</label>
+                            <div class="col-sm-10">
+                                <div class="input-group date">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    <input type="text" class="form-control pull-right pick_date" data-date-format="dd/mm/yyyy" ng-model="eSemeter.REGISTER_FROM">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group form_element">
+                            <label for="datepicker" class="col-sm-2 control-label">Register To</label>
+                            <div class="col-sm-10">
+                                <div class="input-group date">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    <input type="text" class="form-control pull-right pick_date" data-date-format="dd/mm/yyyy" ng-model="eSemeter.REGISTER_TO">
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="form-group form_element">
+                            <label for="datepicker" class="col-sm-2 control-label">Register Time</label>
+                            <div class="col-sm-10">
+                                <div class="input-group date">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    <input type="text" class="form-control pull-right" id="reservation" ng-model="register_time">
+                                </div>
+                            </div>
+                        </div>-->
+                        <div class="form-group form_element">
+                            <label for="exem_desc" class="col-sm-2 control-label">Description</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Description" id="exem_desc" ng-model="eSemeter.SMT_DESC">
+                            </div>
+                        </div>
+                        <div class="form-group form_element">
+                            <label for="exem_desc" class="col-sm-2 control-label">Remark</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Remark" id="exem_desc" ng-model="eSemeter.REMARK">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-footer">
+                        <button class="btn btn-default" ui-sref="users">Cancel</button>
+                        <button type="submit" class="btn btn-success pull-right">Add</button>
+                    </div>
+                </form>
+                <!--</div>-->
+                <!-- /.box-body -->
+                <!--<div class="box-footer">
+                    <button class="btn btn-default" ui-sref="users">Cancel</button>
+                    <button type="submit" class="btn btn-success pull-right">Add</button>
+                </div>-->
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</section>
+
+<script>
+    $(function () {
+        $('.pick_date').datepicker({
+            autoclose: true
+        });
+    })
+</script>

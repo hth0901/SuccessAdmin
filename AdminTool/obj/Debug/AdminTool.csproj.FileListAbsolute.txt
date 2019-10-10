@@ -39,4 +39,6 @@ D:\Workspace\SuccessAdmin\AdminTool\obj\Debug\AdminTool.dll
 D:\Workspace\SuccessAdmin\AdminTool\obj\Debug\AdminTool.pdb
 D:\Workspace\SuccessAdmin\AdminTool\bin\System.Net.Http.Formatting.dll
 D:\Workspace\SuccessAdmin\AdminTool\bin\System.Net.Http.Formatting.xml
-D:\Workspace\SuccessAdmin\AdminTool\obj\Debug\AdminTool.csprojResolveAssemblyReference.cache
+D:\Workspace\SuccessAdmin\AdminTool\obj\Debug\AdminTool.csprojAssemblyReference.cache
+D:\Workspace\SuccessAdmin\AdminTool\obj\Debug\AdminTool.csproj.CoreCompileInputs.cache
+D:\Workspace\SuccessAdmin\AdminTool\obj\Debug\AdminTool.csproj.CopyComplete
